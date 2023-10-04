@@ -1,0 +1,31 @@
+// APP Primary Colors:
+$app-colors: (
+	'primary': (
+		'peach': #e7816b,
+		'black': #1d1c1e,
+		'white': #ffffff,
+		'off-white': #fdf3f0,
+		'danger': #e15757,
+	),
+	'secondary': (
+		'peach': #ffad9b,
+		'black': #333136,
+		'white': #f1f3f5,
+	),
+);
+
+:root {
+	@each $category, $colors in $app-colors {
+		@each $color, $value in $colors {
+			--#{$category}-#{$color}: #{$value};
+		}
+	}
+}
+
+$primary-peach: #e7816b;
+$primary-black: #1d1c1e;
+$primary-white: #ffffff;
+$primary-off-white: #fdf3f0;
+$secondary-peach: #ffad9b;
+$secondary-black: #333136;
+$secondary-white: #f1f3f5;

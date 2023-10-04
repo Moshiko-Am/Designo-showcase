@@ -1,0 +1,84 @@
+* {
+	font-family: 'Jost', sans-serif;
+}
+
+body,
+span,
+p {
+	font-size: 16px;
+	line-height: 26px;
+}
+
+h1 {
+	font-size: 48px;
+	line-height: 48px;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 40px;
+	line-height: 48px;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+h3 {
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: 500;
+	letter-spacing: 5px;
+}
+
+// Button Styles:
+.btn {
+	border-radius: $border-radius-normal;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-size: 15px;
+	letter-spacing: 1.5px;
+	padding: 12px 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 250ms ease-in-out;
+
+	&--primary {
+		background-color: $primary-white;
+		color: var(--secondary-black);
+
+		&:hover, &:disabled {
+			background-color: rgba($primary-white, 0.5);
+			color: var(--primary-white);
+		}
+
+		&:disabled {
+			cursor: not-allowed;
+		}
+
+	}
+
+	&--secondary {
+		background-color: var(--primary-peach);
+		color: var(--primary-white);
+
+		&:hover {
+			background-color: rgba($primary-peach, 0.5);
+		}
+	}
+}
+
+input, textarea {
+	width: 100%;
+	border: none;
+	font-family: 'Jost', sans-serif;
+	background-color: transparent;
+	font-size: 15px;
+	outline: none;
+	color: var(--primary-white);
+	caret-color: var(--primary-white);
+
+	&::placeholder {
+		color: rgba($primary-white, 0.5);
+	}
+}

@@ -1,0 +1,26 @@
+.home-page {
+	&::before {
+		content: '';
+		width: 60%;
+		height: 60%;
+		background: linear-gradient(to left, rgba($secondary-white, 1) 80%, rgba($secondary-white, 0.5), rgba($secondary-white, 0));
+		position: absolute;
+		display: block;
+		top: 50%;
+		border-radius: 297px 297px 297px 0;
+		left: 0;
+	}
+
+	&::after {
+		content: '';
+		width: 75%;
+		height: 65%;
+		background: linear-gradient(to right, rgba($secondary-white, 1) 80%, rgba($secondary-white, 0.5), rgba($secondary-white, 0));
+		position: absolute;
+		display: block;
+		bottom: -150%;
+		border-radius: 297px 0 297px 297px;
+		right: 0;
+		z-index: -1;
+	}
+}

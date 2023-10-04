@@ -1,0 +1,211 @@
+.about-page {
+	&:before {
+		content: '';
+		width: 50%;
+		height: 60%;
+		background: linear-gradient(to left, rgba($secondary-white, 1) 80%, rgba($secondary-white, 0.5), rgba($secondary-white, 0));
+		position: absolute;
+		display: block;
+		top: 40%;
+		border-radius: 297px 297px 297px 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	&:after {
+		content: '';
+		width: 75%;
+		height: 65%;
+		background: linear-gradient(to right, rgba($secondary-white, 1) 80%, rgba($secondary-white, 0.5), rgba($secondary-white, 0));
+		position: absolute;
+		display: block;
+		bottom: -140%;
+		border-radius: 297px 0 297px 297px;
+		right: 0;
+		z-index: -1;
+	}
+
+	&__content-container {
+		display: flex;
+		overflow: hidden;
+		justify-content: space-between;
+
+		&:nth-child(2) {
+			flex-direction: row-reverse;
+		}
+
+		&--locations {
+			justify-content: space-around;
+		}
+
+		@media (max-width: 1100px) {
+			&,
+			&:nth-child(2) {
+				flex-direction: column-reverse;
+			}
+			&--locations {
+				flex-direction: column;
+			}
+		}
+	}
+
+	&__text-wrapper {
+		border-top-left-radius: $border-radius-big;
+		border-bottom-left-radius: $border-radius-big;
+		flex: 1;
+		padding: 4rem 10rem;
+		background-color: var(--primary-off-white);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 2rem;
+		position: relative;
+		z-index: 1;
+
+		h1 {
+			color: var(--primary-peach);
+		}
+
+		p {
+			max-width: 450px;
+		}
+
+		&--about-us {
+			background-color: var(--primary-peach);
+
+			&:before {
+				content: '';
+				position: absolute;
+				background-image: url('/src/assets/about/desktop/bg-pattern-hero-about-desktop.svg');
+				background-repeat: no-repeat;
+				background-position: left;
+				width: 100%;
+				height: 120%;
+				z-index: -1;
+			}
+
+			h1 {
+				color: var(--primary-white);
+			}
+
+			p {
+				color: var(--primary-white);
+			}
+		}
+
+		&--world-class {
+			border-radius: 0 $border-radius-big $border-radius-big 0;
+
+			&:before {
+				content: '';
+				position: absolute;
+				background-image: url('/src/assets/shared/desktop/bg-pattern-three-circles.svg');
+				background-repeat: no-repeat;
+				background-position: left;
+				width: 100%;
+				height: 120%;
+			}
+		}
+
+		&--real-deal {
+			&:before {
+				content: '';
+				position: absolute;
+				background-image: url('/src/assets/shared/desktop/bg-pattern-three-circles.svg');
+				background-repeat: no-repeat;
+				background-position: right;
+				width: 100%;
+				height: 120%;
+			}
+		}
+
+		@media (max-width: 1440px) {
+			padding: 4rem 5rem;
+		}
+
+		@media (max-width: 1100px) {
+			border-radius: 0 0 $border-radius-big $border-radius-big;
+			align-items: center;
+			text-align: center;
+		}
+
+		@media (max-width: 600px) {
+			padding: 4rem 2rem;
+			gap: 1rem;
+		}
+	}
+
+	&__img-wrapper {
+		width: 480px;
+		height: 480px;
+
+		img {
+			height: 480px;
+			width: 480px;
+
+			border-top-right-radius: $border-radius-big;
+			border-bottom-right-radius: $border-radius-big;
+
+			@media (max-width: 1100px) {
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		&--world-class {
+			img {
+				border-radius: $border-radius-big 0 0 $border-radius-big;
+			}
+		}
+
+		@media (max-width: 1100px) {
+			width: 100%;
+			height: 300px;
+
+			img {
+				border-radius: $border-radius-big $border-radius-big 0 0;
+			}
+		}
+	}
+
+	&__location-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+
+		&-img-wrapper {
+			border-radius: 50%;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&:before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				background: linear-gradient(to bottom, var(--primary-white) 10%, var(--primary-off-white) 80%, var(--secondary-white) 100%);
+				position: absolute;
+				z-index: -1;
+			}
+		}
+
+		&-text-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+
+			h3 {
+				text-transform: uppercase;
+				color: var(--secondary-black);
+			}
+
+			button {
+				font-weight: 500;
+			}
+		}
+	}
+}

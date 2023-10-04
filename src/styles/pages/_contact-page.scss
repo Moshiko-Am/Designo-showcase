@@ -1,0 +1,127 @@
+.contact-page {
+	position: relative;
+
+	&::after {
+		content: '';
+		width: 70%;
+		height: 35%;
+		background: linear-gradient(to bottom, rgba($primary-off-white, 1) 5%, rgba($primary-off-white, 0.3), rgba($primary-off-white, 0));
+		position: absolute;
+		display: block;
+		bottom: -5%;
+		border-radius: 297px 297px 297px 0;
+		right: 0;
+		z-index: -2;
+	}
+
+	& > .about-locations__content-container {
+		flex-direction: row;
+	}
+
+	&__contact-form-wrapper {
+		z-index: 1;
+		background-color: var(--primary-peach);
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 5rem 10rem;
+		border-radius: $border-radius-big;
+		position: relative;
+		overflow: hidden;
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 130%;
+			height: 130%;
+			background-image: url('/src/assets/about/desktop/bg-pattern-hero-about-desktop.svg');
+			background-repeat: no-repeat;
+			background-position: left;
+			background-size: contain;
+		}
+
+		@media (max-width: 1400px) {
+			padding: 5rem 5rem;
+		}
+
+		@media (max-width: 900px) {
+			flex-direction: column;
+			gap: 2rem;
+			padding: 5rem 2rem;
+		}
+	}
+
+	&__text-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 2rem;
+		color: var(--primary-white);
+		z-index: 1;
+
+		@media (max-width: 600px) {
+			text-align: center;
+		}
+	}
+
+	&__description {
+		max-width: 450px;
+
+		@media (max-width: 900px) {
+			max-width: 100%;
+		}
+
+
+	}
+
+	&__form-container {
+		z-index: 1;
+		width: 400px;
+
+		@media (max-width: 900px) {
+			width: 100%;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+
+		.btn.btn--primary {
+			align-self: end;
+			padding-inline: 2rem;
+		}
+	}
+
+	&__form-group {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		box-shadow: 0 1px 0 0 var(--secondary-white);
+		padding: 0.5rem 1rem;
+		transition: all 250ms ease-in-out;
+		position: relative;
+
+		&--error {
+			box-shadow: 0 1px 0 0 var(--primary-danger);
+		}
+	}
+
+	&__error-container {
+		min-width: fit-content;
+		color: var(--primary-white);
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.about-locations__content-container {
+		@media (max-width: 900px) {
+			flex-direction: column;
+			gap: 2rem;
+		}
+	}
+}
